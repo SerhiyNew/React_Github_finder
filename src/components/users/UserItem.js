@@ -2,13 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 const UserItem = props => {
-  // state = {
-  //   id: 'id',
-  //   login: 'Martin',
-  //   avatar_url: 'https://avatars.githubusercontent.com/u/1?v=4',
-  //   html_url: 'https://github.com/mojombo',
-  // };
-
   const { login, avatar_url } = props.user;
   return (
     <div className='card text-center'>
