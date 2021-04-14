@@ -27,7 +27,6 @@ class App extends Component {
       `https://api.github.com/search/users?q=${text}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET} `
     );
     this.setState({ users: res.data.items, loading: false });
-    //console.log(text);
   };
 
   // Get single Github user
@@ -64,13 +63,6 @@ class App extends Component {
     setTimeout(() => this.setState({ alert: null }), 2000);
   };
 
-  // async componentDidMount() {
-  //   this.setState({ loading: true });
-  //   const res = await axios.get(
-  //     `https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET} `
-  //   );
-  //   this.setState({ users: res.data, loading: false });
-  // }
   render() {
     const { users, user, repos, loading } = this.state;
 
